@@ -46,7 +46,6 @@ app.get("/search", async (req, res) => {
       params: {
         api_key: API_KEY,
         query: movieName,
-
         language: "en-US",
       },
     });
@@ -66,7 +65,6 @@ app.get("/search", async (req, res) => {
       title: "Search Results",
       movies: movies,
       name: "Itaty C",
-      poster_path: Image,
     });
   } catch (error) {
     console.log(error);
