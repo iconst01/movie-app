@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>{{title}}</h1>
+      <p>Welcome to the Movie Finder! Search for a movie and find similar
+        movies.</p>
+    </header>
+
+    <form action="/search" method="get">
+      <input type="text" name="movie" placeholder="Enter movie name" required />
+      <button type="submit">Search</button>
+    </form>
+
+    {{#if error}}
+      <p class="error">{{error}}</p>
+    {{/if}}
+
+    <footer>
+      <p>{{name}} &copy; 2024</p>
+    </footer>
+  </body>
+</html>
